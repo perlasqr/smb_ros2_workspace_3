@@ -1,0 +1,122 @@
+# ROS 2 build directories
+build/
+install/
+log/
+
+# Colcon build artifacts
+.colcon_cd_root
+.colcon_install_layout
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# C++ artifacts
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ROS 2 specific
+.rosinstall
+.catkin_workspace
+
+# Ignore generated documentation
+doc/
+docs/_build/
+
+# Ignore rosbag files
+*.bag
+*.db3
+
+# Ignore ROS 2 parameter files that are generated
+*.yaml.tmp
+
+# Ignore ROS 2 launch argument files that are generated
+*.launch.py.tmp
+
+# Ignore ROS 2 message and service files that are generated
+*_msgs/msg/_*.py
+*_srvs/srv/_*.py
+*_msgs/msg/*.h
+*_srvs/srv/*.h
+
+# Ignore ROS 2 action files that are generated
+*_actions/action/_*.py
+*_actions/action/*.h
+
+# Ignore zsh history
+.zsh_history
+
+# Ignore bash history
+.bash_history
+
+# Ignore gitman dependencies
+src/core/smb_bringup
+src/core/smb_description
+src/core/smb_gazebo
+src/core/smb_kinematics
+src/core/smb_low_level_controller
+src/core/smb_low_level_controller_gazebo
+src/core/smb_ui
+src/hardware/rslidar_msg
+src/hardware/rslidar_sdk
+src/hardware/flir_camera_driver
+src/estimation/direct_lidar_inertial_odometry
+src/estimation/graph_msf_dev
+src/estimation/holistic_fusion
+src/estimation/open3d_slam_private
+src/planning/far_planner
+src/planning/tare_planner
+src/planning/navigation_ext_ros2
+src/perception/smb_object_detection
+src/utils/smb_power_status
+src/utils/twist_pid_controller
+src/visualization/joy_panel_cpp
+src/visualization/smb_rviz_plugins
+src/visualization/joy_panel_cpp
+
+# Data files
+/data/rosbags/*
+!/data/rosbags/.gitkeep
+
+# Ignore gitman log
+dependencies/gitman.log
+
+# Ignore venv
+.venv/
+venv/
