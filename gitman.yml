@@ -1,0 +1,155 @@
+location: dependencies
+default_group: ''
+groups: []
+sources:
+  - name: smb_description_ros2
+    repo: https://github.com/ETHZ-RobotX/smb_description_ros2.git
+    rev: main
+    type: git
+    links:
+      - source: .
+        target: src/core/smb_description
+  - name: smb_gazebo_ros2
+    repo: https://github.com/ETHZ-RobotX/smb_gazebo_ros2.git
+    rev: main
+    type: git
+    links:
+      - source: .
+        target: src/core/smb_gazebo
+  - name: smb_low_level_controller_gazebo_ros2
+    repo: https://github.com/ETHZ-RobotX/smb_low_level_controller_gazebo_ros2.git
+    rev: main
+    type: git
+    links:
+      - source: .
+        target: src/core/smb_low_level_controller_gazebo
+  - name: smb_kinematics_ros2
+    repo: https://github.com/ETHZ-RobotX/smb_kinematics_ros2.git
+    rev: main
+    type: git
+    links:
+      - source: .
+        target: src/core/smb_kinematics
+  - name: direct_lidar_inertial_odometry
+    repo: https://github.com/ETHZ-RobotX/direct_lidar_inertial_odometry.git
+    rev: main
+    type: git
+    links:
+      - source: .
+        target: src/estimation/direct_lidar_inertial_odometry
+  - name: smb_rviz_plugins_ros2
+    repo: https://github.com/ETHZ-RobotX/smb_rviz_plugins_ros2.git
+    rev: main
+    type: git
+    links:
+      - source: .
+        target: src/visualization/smb_rviz_plugins
+  - name: smb_ui_ros2
+    repo: https://github.com/ETHZ-RobotX/smb_ui_ros2.git
+    rev: main
+    type: git
+    links:
+      - source: .
+        target: src/core/smb_ui
+  - name: holistic_fusion
+    repo: https://github.com/leggedrobotics/holistic_fusion.git
+    rev: julian/feature/ros2
+    type: git
+    links:
+      - source: .
+        target: src/estimation/holistic_fusion
+  - name: smb_bringup
+    repo: https://github.com/ETHZ-RobotX/smb_bringup.git
+    rev: main
+    type: git
+    links:
+      - source: .
+        target: src/core/smb_bringup
+  - name: smb_power_status
+    repo: https://github.com/ETHZ-RobotX/smb_powerstatus_ros2.git
+    rev: main
+    type: git
+    links:
+      - source: .
+        target: src/utils/smb_power_status
+  - name: smb_low_level_controller_ros2
+    repo: https://github.com/ETHZ-RobotX/smb_lowlevel_controller_ros2.git
+    rev: main
+    type: git
+    links:
+      - source: .
+        target: src/core/smb_low_level_controller
+    scripts:
+      - git submodule update --init --recursive
+  - name: far_planner
+    repo: https://github.com/ETHZ-RobotX/far_planner.git
+    rev: main
+    type: git
+    links:
+      - source: .
+        target: src/planning/far_planner
+  - name: tare_planner
+    repo: https://github.com/ETHZ-RobotX/tare_planner.git
+    rev: main
+    type: git
+    links:
+      - source: .
+        target: src/planning/tare_planner
+  - name: navigation_ext_ros2
+    repo: https://github.com/ETHZ-RobotX/navigation_ext_ros2.git
+    rev: main
+    type: git
+    links:
+      - source: .
+        target: src/planning/navigation_ext_ros2
+  - name: rslidar_sdk
+    repo: https://github.com/ETHZ-RobotX/rslidar_sdk.git
+    rev: main
+    type: git
+    links:
+      - source: .
+        target: src/hardware/rslidar_sdk
+    scripts:
+      - git submodule update --init --recursive
+  - name: rslidar_msg
+    repo: https://github.com/RoboSense-LiDAR/rslidar_msg.git
+    rev: master
+    type: git
+    links:
+      - source: .
+        target: src/hardware/rslidar_msg
+  - name: flir_camera_driver
+    repo: https://github.com/ros-drivers/flir_camera_driver.git
+    rev: humble-devel
+    type: git
+    links:
+      - source: .
+        target: src/hardware/flir_camera_driver
+  - name: twist_pid_controller
+    repo: https://github.com/ETHZ-RobotX/twist_pid_controller.git
+    rev: main
+    type: git
+    links:
+      - source: .
+        target: src/utils/twist_pid_controller
+  - name: open3d_slam_private
+    repo: https://github.com/leggedrobotics/open3d_slam_private.git
+    rev: ros2jazzy
+    type: git
+    links:
+      - source: .
+        target: src/estimation/open3d_slam_private
+  - name: joy_panel_cpp
+    repo: https://github.com/ETHZ-RobotX/joy_panel_cpp.git
+    type: git
+    rev: main
+    links:
+      - source: .
+        target: src/visualization/joy_panel_cpp
+  - name: smb_object_detection
+    repo: https://github.com/ETHZ-RobotX/smb_object_detection_ros2.git
+    rev: main
+    type: git
+    links:
+      - source: .
+        target: src/perception/smb_object_detection

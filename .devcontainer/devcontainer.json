@@ -1,0 +1,51 @@
+{
+	"name": "SMB ROS2 Workspace",
+	"build": {
+		"context": "..",
+		"dockerfile": "Dockerfile",
+		"args": {
+			"BUILDKIT_INLINE_CACHE": "0",
+			"BASE_IMAGE": "ghcr.io/ethz-robotx/smb_ros2_workspace:main",
+			"USERNAME": "${localEnv:USER}",
+			"USER_UID": "1000",
+			"USER_GID": "1000"
+		}
+	},
+	"runArgs": [
+		// Uncomment it if you have problems with the auto X11 forwarding
+		// "--volume=/tmp/.X11-unix/X0:/tmp/.X11-unix/X0", 
+		"--shm-size=2g", // 2GB of shared memory, increase if you have extra memory or decrease if you have limited memory
+		"--network=host",
+		// "-v",
+		// "${localEnv:HOME}/.gitcache:/home/${localEnv:USER}/.gitcache",
+		"--device=/dev/dri"
+	],
+	"privileged": true,
+	"containerEnv": {
+		"DISPLAY": "${localEnv:DISPLAY}", // Will be overridden by post-create script when VNC is enabled
+		"VNC_ENABLED": "true", // VNC is disabled by default, set to true to enable VNC
+		"VNC_USERNAME": "robotx",
+		"VNC_PASSWORD": "robotx",
+		"QT_X11_NO_MITSHM": "1",
+		"MPLBACKEND": "Qt5Agg"
+	},
+	"otherPortsAttributes": {
+		"onAutoForward": "ignore"
+	},
+	// "initializeCommand": "docker pull ghcr.io/ethz-robotx/smb_ros2_workspace:main",
+	"postCreateCommand": "bash ./.devcontainer/post-create.sh",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.cpptools-extension-pack",
+				"mhutchie.git-graph",
+				"ms-python.python",
+				"tombonnike.vscode-status-bar-format-toggle",
+				"ms-python.black-formatter",
+				"vscode-icons-team.vscode-icons"
+			]
+		}
+	},
+	"workspaceMount": "source=${localWorkspaceFolder},target=/smb_ros2_workspace,type=bind",
+	"workspaceFolder": "/smb_ros2_workspace"
+}
