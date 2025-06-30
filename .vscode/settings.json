@@ -13,5 +13,8 @@
     "git.repositoryScanMaxDepth": 5,
     "git.ignoredRepositories": [
     ],
-    "cmake.sourceDirectory": "/smb_ros2_workspace/src/meta_packages/meta_smb_jetson"
+    "cmake.sourceDirectory": "/smb_ros2_workspace/src/meta_packages/meta_smb_jetson",
+    "files.associations": {
+        "ostream": "cpp"
+    }
 }

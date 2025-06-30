@@ -121,3 +121,7 @@ dependencies/gitman.log
 # Ignore venv
 .venv/
 venv/
+
+# Ignore tf2_tools output
+*.pdf
+*.gv
